@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio - Lucas Bispo</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <div class="hero-text">
       <p class="intro">Olá, eu sou</p>
       <h1>Lucas Bispo</h1>
-      <h2>UI & UX Designer</h2>
+      <h2>UI &amp; UX Designer</h2>
       <p class="desc">Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
       <a href="#contato" class="btn">Contrate-me</a>
     </div>
@@ -51,6 +51,7 @@
       <div class="sobre-text">
         <h2>Sobre Mim</h2>
         <p>Profissional de design dedicado, com experiência em UX e desenvolvimento. Sólido entendimento dos princípios de design visual. Capaz de transformar desafios em soluções visuais funcionais, sempre buscando melhorar a experiência do usuário por meio de design estratégico e estético.</p>
+
         <div class="skills">
           <p>UX</p>
           <div class="barra"><span style="width:90%"></span></div>
@@ -68,7 +69,7 @@
   <!-- Serviços -->
   <section id="servicos" class="servicos">
     <h2>Serviços</h2>
-    <div class="container-cards">
+    <div class="container-cards container">
       <div class="card">
         <i class="ri-macbook-line"></i>
         <h3>UI/UX Design</h3>
@@ -94,15 +95,19 @@
 
   <!-- Projetos -->
   <section id="projetos" class="projetos">
-    <h2>Projetos</h2>
-    <div class="container-projetos">
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-    </div>
-    <div class="btn-center">
-      <a href="#" class="btn">Ver todos</a>
+    <div class="container">
+      <h2>Projetos</h2>
+
+      <div class="container-projetos">
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+      </div>
+
+      <div class="btn-center">
+        <a href="#" class="btn">Ver todos</a>
+      </div>
     </div>
   </section>
 
@@ -114,7 +119,7 @@
         <p><i class="ri-phone-line"></i> (61) 99922-5832</p>
         <p><i class="ri-mail-line"></i> lucas.pereira.bispo@hotmail.com</p>
         <p><i class="ri-map-pin-line"></i> DF, Brasília, Guará I</p>
-        <p><i class="ri-linkedin-box-line"></i> <a href="https://linkedin.com/in/lucasbispo703" target="_blank">linkedin.com/in/lucasbispo703</a></p>
+        <p><i class="ri-linkedin-box-line"></i> <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lucasbispo703</a></p>
       </div>
       <form>
         <input type="email" placeholder="Seu email" required>
@@ -127,10 +132,22 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <div class="footer-logo">
-        <span class="logo-box">LB</span>
-        <span>Lucas Bispo</span>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-box">LB</span>
+          <span>Lucas Bispo</span>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="https://www.behance.net/lucasbispo703" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+            <i class="ri-behance-line"></i>
+          </a>
+        </div>
       </div>
+
       <ul class="footer-links">
         <li><a href="#">Início</a></li>
         <li><a href="#sobre">Sobre mim</a></li>
@@ -138,6 +155,7 @@
         <li><a href="#projetos">Portfólio</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+
       <p>© 2024 Lucas Bispo. Todos os direitos reservados.</p>
     </div>
   </footer>

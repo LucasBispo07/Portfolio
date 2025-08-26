@@ -1,15 +1,6 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  background: #f9fafc;
-  line-height: 1.6;
-}
+/* --- (manter o reset e demais estilos que você já tinha) --- */
+
+/* Global container (mantive como antes) */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -19,17 +10,7 @@ body {
   justify-content: space-between;
 }
 
-/* Header */
-header {
-  background: #fff;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
-}
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* Header logo box */
 .logo-box {
   background: #34495e;
   color: #fff;
@@ -37,188 +18,133 @@ header .logo {
   padding: 6px 10px;
   border-radius: 4px;
 }
-.logo-text {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-header nav ul {
-  display: flex;
-  list-style: none;
-}
-header nav ul li {
-  margin: 0 10px;
-}
-header nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-.btn {
-  display: inline-block;
-  background: #34495e;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
 
-/* Hero */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 10%;
-}
-.hero-text .intro {
-  font-size: 1rem;
-  color: #555;
-}
-.hero-text h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-}
-.hero-text h2 {
-  font-size: 1.5rem;
-  color: #34495e;
-  margin-bottom: 20px;
-}
-.hero-text .desc {
-  max-width: 500px;
-  margin-bottom: 20px;
-}
+/* Hero (mantido) */
+.hero { ... } /* seu estilo existente pode ficar */
 
-/* Seções */
-section {
-  padding: 60px 10%;
-}
+/* --- Correção específica: Sobre Mim (espaçamento entre imagem e texto) --- */
 .sobre .container {
-  display: flex;
-  gap: 50px;
+  display: flex;      /* assegura layout em linha */
+  gap: 30px;
   align-items: center;
 }
+
+/* Faz a imagem ocupar um espaço fixo e o texto ocupar o restante */
+.sobre .sobre-img {
+  flex: 0 0 48%;
+}
+.sobre .sobre-text {
+  flex: 1;
+  padding-left: 32px; /* espaço entre imagem e texto */
+}
+
+/* garante que imagem preencha corretamente */
 .sobre-img img {
-  border-radius: 10px;
-}
-.skills .barra {
-  background: #ddd;
-  border-radius: 10px;
-  margin: 8px 0;
-  height: 10px;
-  overflow: hidden;
-}
-.skills .barra span {
+  width: 100%;
   display: block;
-  background: #34495e;
-  height: 100%;
+  border-radius: 10px;
 }
 
-/* Cards */
-.servicos .container-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform .3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card i {
-  font-size: 2rem;
-  color: #34495e;
+/* --- Projetos: mantive o grid e centralizei o botão --- */
+/* Para evitar conflitos com .container (que é flex), sobrescrevemos dentro de .projetos */
+.projetos .container {
+  display: block; /* torna o wrapper vertical, alinhado com outras seções */
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Projetos */
+/* grid de projetos (use o que você já tinha, assegure gap) */
 .container-projetos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+/* Estiliza os cards de projeto */
 .projeto {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   overflow: hidden;
-  text-align: center;
+  text-align: left;
 }
-.projeto img {
-  width: 100%;
-  border-bottom: 1px solid #eee;
-}
-.projeto p {
-  padding: 10px;
-}
-.btn-center {
-  text-align: center;
+.projeto img { width: 100%; display:block; }
+.projeto p { padding: 10px; }
+
+/* Centra o botão "Ver todos" dentro da largura do conteúdo */
+.projetos .btn-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
 }
 
-/* Contato */
+/* --- Contato (mantido com pequenos ajustes) --- */
 .contato .container {
   display: flex;
   gap: 50px;
   align-items: flex-start;
 }
-.contato .info {
-  flex: 1;
-}
-.contato .info p {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.contato .info i {
-  color: #34495e;
-}
-.contato form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.contato input, .contato textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
 
-/* Footer */
+/* --- Footer: adicionando ícones sociais e layout --- */
 footer {
   background: #2c3e50;
   color: #fff;
-  text-align: center;
-  padding: 30px 10%;
+  padding: 30px 0;
   margin-top: 40px;
 }
 .footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
-}
-.footer-logo {
-  display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: bold;
 }
+
+/* topo do footer com logo + redes */
+.footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* social icons */
+.footer-social a {
+  color: #fff;
+  margin-left: 12px;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.footer-social a:hover { color: #f1c40f; }
+
+/* links do footer */
 .footer-links {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding: 0;
 }
 .footer-links a {
   color: #fff;
   text-decoration: none;
-  transition: color .3s;
 }
-.footer-links a:hover {
-  color: #f1c40f;
+
+/* pequenas melhorias de responsividade (básico) */
+@media (max-width: 900px) {
+  .container { width: 92%; }
+  .servicos .container-cards { grid-template-columns: repeat(2, 1fr); }
+  .container-projetos { grid-template-columns: repeat(2, 1fr); }
+  .sobre .container { flex-direction: column; }
+  .sobre .sobre-img, .sobre .sobre-text { flex: none; padding-left: 0; }
+  .projetos .container-projetos { gap: 12px; }
+}
+
+@media (max-width: 520px) {
+  .servicos .container-cards { grid-template-columns: 1fr; }
+  .container-projetos { grid-template-columns: 1fr; }
+  .hero { flex-direction: column; gap: 20px; padding: 40px 6%; }
 }
