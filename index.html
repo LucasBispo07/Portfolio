@@ -8,11 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">LB <span>Lucas Bispo</span></div>
+      <div class="logo">
+        <span class="logo-box">LB</span>
+        <span class="logo-text">Lucas Bispo</span>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Início</a></li>
@@ -29,10 +31,10 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-text">
-      <p>Olá, eu sou</p>
+      <p class="intro">Olá, eu sou</p>
       <h1>Lucas Bispo</h1>
       <h2>UI & UX Designer</h2>
-      <p>Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
+      <p class="desc">Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
       <a href="#contato" class="btn">Contrate-me</a>
     </div>
     <div class="hero-img">
@@ -99,7 +101,9 @@
       <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
       <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
     </div>
-    <a href="#" class="btn">Ver todos</a>
+    <div class="btn-center">
+      <a href="#" class="btn">Ver todos</a>
+    </div>
   </section>
 
   <!-- Contato -->
@@ -110,7 +114,7 @@
         <p><i class="ri-phone-line"></i> (61) 99922-5832</p>
         <p><i class="ri-mail-line"></i> lucas.pereira.bispo@hotmail.com</p>
         <p><i class="ri-map-pin-line"></i> DF, Brasília, Guará I</p>
-        <p><i class="ri-linkedin-box-line"></i> linkedin.com/in/lucasbispo703</p>
+        <p><i class="ri-linkedin-box-line"></i> <a href="https://linkedin.com/in/lucasbispo703" target="_blank">linkedin.com/in/lucasbispo703</a></p>
       </div>
       <form>
         <input type="email" placeholder="Seu email" required>
@@ -122,8 +126,20 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Lucas Bispo. Todos os direitos reservados.</p>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="logo-box">LB</span>
+        <span>Lucas Bispo</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#projetos">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <p>© 2024 Lucas Bispo. Todos os direitos reservados.</p>
+    </div>
   </footer>
-
 </body>
 </html>
