@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio - Lucas Bispo</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("SEU_USER_ID_EMAILJS"); // <-- troque pelo seu user ID do EmailJS
-    })();
-    function sendEmail(e) {
-      e.preventDefault();
-      emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', e.target)
-      .then(() => alert('Mensagem enviada com sucesso!'),
-            (err) => alert('Erro: ' + JSON.stringify(err)));
-    }
-  </script>
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="container">
-      <div class="logo">LB <span>Lucas Bispo</span></div>
+      <div class="logo">
+        <span class="logo-box">LB</span>
+        <span class="logo-text">Lucas Bispo</span>
+      </div>
       <nav>
         <ul>
           <li><a href="#">Início</a></li>
@@ -33,17 +24,17 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <a href="./curriculo.pdf" download class="btn">Baixar Currículo</a>
+      <a href="#" class="btn">Baixar Currículo</a>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-text">
-      <p>Olá, eu sou</p>
+      <p class="intro">Olá, eu sou</p>
       <h1>Lucas Bispo</h1>
-      <h2>UI & UX Designer</h2>
-      <p>Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
+      <h2>UI &amp; UX Designer</h2>
+      <p class="desc">Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
       <a href="#contato" class="btn">Contrate-me</a>
     </div>
     <div class="hero-img">
@@ -60,6 +51,7 @@
       <div class="sobre-text">
         <h2>Sobre Mim</h2>
         <p>Profissional de design dedicado, com experiência em UX e desenvolvimento. Sólido entendimento dos princípios de design visual. Capaz de transformar desafios em soluções visuais funcionais, sempre buscando melhorar a experiência do usuário por meio de design estratégico e estético.</p>
+
         <div class="skills">
           <p>UX</p>
           <div class="barra"><span style="width:90%"></span></div>
@@ -77,7 +69,7 @@
   <!-- Serviços -->
   <section id="servicos" class="servicos">
     <h2>Serviços</h2>
-    <div class="container-cards">
+    <div class="container-cards container">
       <div class="card">
         <i class="ri-macbook-line"></i>
         <h3>UI/UX Design</h3>
@@ -103,14 +95,20 @@
 
   <!-- Projetos -->
   <section id="projetos" class="projetos">
-    <h2>Projetos</h2>
-    <div class="container-projetos">
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
-      <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+    <div class="container">
+      <h2>Projetos</h2>
+
+      <div class="container-projetos">
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+        <div class="projeto"><img src="./img/comissionamento.png" alt="Projeto Comissionamento"><p>Comissionamento B2B</p></div>
+      </div>
+
+      <div class="btn-center">
+        <a href="#" class="btn">Ver todos</a>
+      </div>
     </div>
-    <a href="https://www.behance.net/lucasbispo703" target="_blank" class="btn">Ver todos</a>
   </section>
 
   <!-- Contato -->
@@ -121,12 +119,11 @@
         <p><i class="ri-phone-line"></i> (61) 99922-5832</p>
         <p><i class="ri-mail-line"></i> lucas.pereira.bispo@hotmail.com</p>
         <p><i class="ri-map-pin-line"></i> DF, Brasília, Guará I</p>
-        <p><i class="ri-linkedin-box-line"></i> <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank">LinkedIn</a></p>
-        <p><i class="ri-behance-line"></i> <a href="https://www.behance.net/lucasbispo703" target="_blank">Behance</a></p>
+        <p><i class="ri-linkedin-box-line"></i> <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank" rel="noopener noreferrer">linkedin.com/in/lucasbispo703</a></p>
       </div>
-      <form onsubmit="sendEmail(event)">
-        <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="message" placeholder="Sua mensagem"></textarea>
+      <form>
+        <input type="email" placeholder="Seu email" required>
+        <textarea placeholder="Sua mensagem"></textarea>
         <button type="submit" class="btn">Enviar mensagem</button>
       </form>
     </div>
@@ -134,10 +131,32 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Lucas Bispo. Todos os direitos reservados.</p>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
-      <a href="https://www.behance.net/lucasbispo703" target="_blank"><i class="ri-behance-fill"></i></a>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-box">LB</span>
+          <span>Lucas Bispo</span>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="https://www.behance.net/lucasbispo703" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+            <i class="ri-behance-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#projetos">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <p>© 2024 Lucas Bispo. Todos os direitos reservados.</p>
     </div>
   </footer>
 </body>
