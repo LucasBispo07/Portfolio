@@ -1,7 +1,8 @@
 // Inicializa EmailJS
-(function() {
-  emailjs.init("SNa-heMCl1Hm97lpF"); // sua Public Key
+(function(){
+    emailjs.init("HOy6o2W1X-XchqSUk"); // sua Public Key
 })();
+
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
   event.preventDefault();
