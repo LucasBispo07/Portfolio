@@ -10,29 +10,38 @@
 <body>
   <!-- Cabeçalho -->
   <header>
-    <div class="logo">
-      <img src="assets/img/logo.png" alt="Logo Lucas Bispo">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo Lucas Bispo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="assets/curriculo.pdf" class="btn" download>Baixar Currículo</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Seção Sobre -->
-  <section id="sobre">
-    <h1>Olá, sou Lucas Bispo</h1>
-    <p>Designer focado em experiências visuais e interfaces criativas.</p>
-    <img src="assets/img/lucas.png" alt="Foto de Lucas Bispo">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Olá, eu sou <br><strong>Lucas Bispo</strong></h1>
+      <h2>UI & UX Designer</h2>
+      <p>Profissional de design dedicado, com experiência em UX e desenvolvimento, capaz de transformar desafios em soluções visuais funcionais.</p>
+      <a href="#contato" class="btn">Contrate-me</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/img/lucas.png" alt="Foto de Lucas Bispo">
+    </div>
   </section>
 
-  <!-- Seção Projetos -->
+  <!-- Projetos -->
   <section id="projetos">
     <h2>Meus Projetos</h2>
-    <div class="projetos-container">
+    <div class="container-projetos">
       <div class="projeto">
         <img src="assets/img/computador.png" alt="Trabalho de design">
         <p>Projeto de UI/UX com foco em usabilidade.</p>
@@ -44,20 +53,22 @@
     </div>
   </section>
 
-  <!-- Seção Contato -->
+  <!-- Contato -->
   <section id="contato">
     <h2>Entre em Contato</h2>
-    <p>Conecte-se comigo pelas redes:</p>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Seu Nome" required>
+      <input type="email" id="email" placeholder="Seu Email" required>
+      <input type="text" id="title" placeholder="Assunto" required>
+      <textarea id="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+      <button type="submit" class="btn">Enviar Mensagem</button>
+      <p id="form-status"></p>
+    </form>
+
     <div class="redes">
-      <a href="https://github.com/LucasBispo07" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://www.behance.net/lucasbispo703" target="_blank">
-        <i class="fab fa-behance"></i> Behance
-      </a>
+      <a href="https://github.com/LucasBispo07" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/lucasbispo703/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.behance.net/lucasbispo703" target="_blank"><i class="fab fa-behance"></i> Behance</a>
     </div>
   </section>
 
@@ -65,5 +76,9 @@
   <footer>
     <p>© 2025 Lucas Bispo - Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
