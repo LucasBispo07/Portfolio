@@ -1,15 +1,18 @@
-/* Reset */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #2c3e50;
   background: #f9fafc;
   line-height: 1.6;
 }
+
+/* Container genérico */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -24,6 +27,9 @@ header {
   background: #fff;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 header .logo {
   font-weight: bold;
@@ -38,8 +44,12 @@ header nav ul li {
 }
 header nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #2c3e50;
   font-weight: 500;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #34495e;
 }
 .btn {
   display: inline-block;
@@ -49,6 +59,10 @@ header nav ul li a {
   border-radius: 6px;
   text-decoration: none;
   text-align: center;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #2c3e50;
 }
 
 /* Hero */
@@ -66,24 +80,32 @@ header nav ul li a {
 .hero-text h2 {
   font-size: 1.5rem;
   color: #34495e;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
 }
 .hero-img img {
-  max-width: 350px;
-  border-radius: 12px;
+  max-width: 300px;
+  border-radius: 50%;
 }
 
 /* Seções */
 section {
   padding: 60px 10%;
 }
+section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* Sobre Mim */
 .sobre {
   display: flex;
   gap: 40px;
   align-items: center;
 }
 .sobre-img img {
-  max-width: 300px;
+  max-width: 350px;
+  border-radius: 12px;
 }
 .skills .barra {
   background: #ddd;
@@ -96,9 +118,10 @@ section {
   display: block;
   background: #34495e;
   height: 100%;
+  border-radius: 10px;
 }
 
-/* Cards */
+/* Cards Serviços */
 .servicos .container-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -110,10 +133,18 @@ section {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 .card i {
   font-size: 2rem;
   color: #34495e;
+  margin-bottom: 10px;
+}
+.card h3 {
+  margin-bottom: 10px;
 }
 
 /* Projetos */
@@ -125,32 +156,28 @@ section {
 .projeto img {
   width: 100%;
   border-radius: 10px;
-}
-.projetos .btn {
-  display: block;
-  margin: 30px auto 0 auto;
-  max-width: 200px;
+  margin-bottom: 8px;
 }
 
 /* Contato */
-.contato .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+#contact {
+  background: #f1f3f6;
 }
-.contato .info {
-  flex: 1;
+#contact form {
+  margin-top: 20px;
 }
-.contato form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.contato input, .contato textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 6px;
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+#form-status {
+  text-align: left;
+  font-weight: 500;
 }
 
 /* Footer */
@@ -160,12 +187,4 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-}
-footer .social {
-  margin-top: 10px;
-}
-footer .social a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5rem;
 }
